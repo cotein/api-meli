@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CONSULTA-ALICUOTA>
+    <fechaDesde>20150701</fechaDesde>
+    <fechaHasta>20150731</fechaHasta>
+    <cantidadContribuyentes>1</cantidadContribuyentes>
+      <contribuyentes class="list">
+        <contribuyente>
+          <cuitContribuyente>20008721123</cuitContribuyente>
+        </contribuyente>
+      </contribuyentes>
+</CONSULTA-ALICUOTA>
