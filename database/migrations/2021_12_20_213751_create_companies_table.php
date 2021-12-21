@@ -23,13 +23,13 @@ class CreateCompaniesTable extends Migration
             $table->json('regimen_general')->nullable();
             $table->json('monotributo')->nullable();
             $table->json('afip_data')->nullable();
-            $table->boolean('percep_iibb')->default(false)->after('monotributo');
+            $table->boolean('percep_iibb')->default(false);
             $table->boolean('percep_iva')->default(false);
             $table->boolean('ret_suss')->default(false);
             $table->boolean('ret_iva')->default(false);
             $table->boolean('ret_iibb')->default(false);
             $table->boolean('ret_gcias')->default(false);
-            $table->date('activity_init')->nullable()->after('ret_gcias');
+            $table->date('activity_init')->nullable();
             $table->string('iibb_conv')->nullable();
             $table->json('settings')->nullable();
             $table->integer('pto_vta_fe')->unsigned()->nullable();
