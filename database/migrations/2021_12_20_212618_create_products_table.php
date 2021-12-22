@@ -16,8 +16,6 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->string('meli_id')->nullable();
-            $table->integer('supplier_id')->unsigned()->nullable();
-            $table->integer('brand_id')->unsigned()->nullable()->nullable();
             $table->json('attr_item_condition')->nullable();//
             $table->json('buying_mode')->nullable();//
             $table->json('main_category')->nullable();//
@@ -37,8 +35,8 @@ class CreateProductsTable extends Migration
             $table->json('listing_type')->nullable();
             $table->string('money')->nullable();
             $table->integer( 'status_id' )->default( 1 );
-            $table->integer('priority_id')->nullable();//para filtrar tipo de producto
-            $table->json('attributes')->nullable();//
+            $table->integer('priority')->nullable();
+            $table->json('attributes')->nullable();
             $table->boolean('published_meli')->nullable()->default(false);
             $table->boolean('published_here')->nullable()->default(false);
             $table->boolean('hot_offert')->nullable()->default(false);
@@ -49,9 +47,6 @@ class CreateProductsTable extends Migration
             $table->json('selected_categories_from_root')->nullable();
             $table->json('meli_info')->nullable();
             $table->text('search_by')->nullable();
-            $table->integer('product_type_id')->unsigned()->nullable();
-            $table->integer('product_model_id')->unsigned()->nullable();
-            $table->integer('category_id')->unsigned()->nullable();
             $table->integer('stock')->unsigned()->nullable()->default(0);
             $table->integer('critical_stock')->unsigned()->nullable()->default(10);
             $table->softDeletes();
