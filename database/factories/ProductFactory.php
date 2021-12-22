@@ -14,8 +14,6 @@ $factory->define(Product::class, function (Faker $faker) {
 
     return [
         'meli_id' => null,
-        'supplier_id' => null,
-        'brand_id' => null,
         'attr_item_condition' => null,
         'buying_mode' =>  null,
         'main_category' =>  null,
@@ -35,7 +33,7 @@ $factory->define(Product::class, function (Faker $faker) {
         'listing_type' => null,
         'money' => 'PES',
         'status_id' => 1,
-        'priority_id' => $faker->randomElement([1,2,3,4,5,6]),
+        'priority' => $faker->randomElement([1,2,3,4,5,6]),
         'attributes' => null,
         'published_meli' => null,
         'published_here' => false,
@@ -47,9 +45,6 @@ $factory->define(Product::class, function (Faker $faker) {
         'selected_categories_from_root' => null,
         'meli_info' => null,
         'search_by' => null,
-        'product_type_id' => null,
-        'product_model_id' => null,
-        'category_id' => 1,
         'stock' => $faker->randomElement([1,2,3,4,5,6, 100, 500, 1000]),
         'critical_stock' => 10
     ];

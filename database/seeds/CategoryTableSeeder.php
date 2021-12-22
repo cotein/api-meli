@@ -30,11 +30,11 @@ class CategoryTableSeeder extends Seeder
         });
 
         
-        dd($this->getCategoryTree());
+        //dd($this->getCategoryTree());
     }
 
-    protected function getCategoryTree($level = 0, $prefix = '') {
-        $rows = \DB::select(['id,parent_id,name'])
+    /* protected function getCategoryTree($level = 0, $prefix = '') {
+        $rows = DB::select(['id,parent_id,name'])
             ->where('parent_id', $level)
             //->order_by(['id','asc'])
             ->get();
@@ -48,5 +48,5 @@ class CategoryTableSeeder extends Seeder
             }
         }
         return $category;
-    }
+    } */
 }

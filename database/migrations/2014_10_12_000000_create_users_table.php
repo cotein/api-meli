@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
             $table->boolean('active')->default(false);
-            $table->integer('type_user_id')->unsigned()->default(1);
+            $table->integer('rol_id')->unsigned()->default(1);
             $table->integer('company_id')->unsigned()->nullable()->default(1);
             $table->rememberToken();
             $table->softDeletes();
