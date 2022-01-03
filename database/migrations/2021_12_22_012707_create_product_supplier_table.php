@@ -17,6 +17,8 @@ class CreateProductSupplierTable extends Migration
             $table->id();
             $table->unsignedInteger('product_id');
             $table->unsignedInteger('supplier_id');
+            $table->integer('company_id')->nullable();
+            $table->unique(['product_id', 'supplier_id', 'company_id']);
             $table->timestamps();
         });
     }

@@ -23,6 +23,7 @@ class CreateAfipTokensTable extends Migration
             $table->text('sign')->nullable();
             $table->string('environment')->nullable();
             $table->boolean('active')->nullable();
+            $table->boolean('company_id')->nullable();
             $table->timestamps();
         });
     }

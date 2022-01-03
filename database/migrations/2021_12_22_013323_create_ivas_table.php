@@ -17,7 +17,7 @@ class CreateIvasTable extends Migration
             $table->id();
             $table->string('afip_code')->nullable();
             $table->string('name')->nullable();
-            $table->double('percentage', 12,2)->nullable();
+            $table->string('percentage')->nullable();
             $table->timestamps();
         });
     }

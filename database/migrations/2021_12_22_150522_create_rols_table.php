@@ -17,6 +17,7 @@ class CreateRolsTable extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->integer('level')->nullable();
+            //$table->integer('company_id')->nullable();
             $table->timestamps();
         });
     }

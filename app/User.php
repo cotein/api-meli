@@ -40,6 +40,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function findForPassport($username)
+    {
+        return $this->where('email', $username)->first();
+    }
+
     /**
      * Get the company that owns the User
      *

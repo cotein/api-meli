@@ -49,6 +49,7 @@ class CreateProductsTable extends Migration
             $table->text('search_by')->nullable();
             $table->integer('stock')->unsigned()->nullable()->default(0);
             $table->integer('critical_stock')->unsigned()->nullable()->default(10);
+            $table->integer('company_id')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

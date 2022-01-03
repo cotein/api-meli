@@ -21,6 +21,7 @@ class CreateCategoriesTable extends Migration
             $table->string('slug')->nullable();
             $table->json('attributes')->nullable();
             $table->boolean('active')->nullable()->default(true);
+            $table->integer('company_id')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

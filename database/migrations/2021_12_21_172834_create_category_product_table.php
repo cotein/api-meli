@@ -18,8 +18,8 @@ class CreateCategoryProductTable extends Migration
             $table->unsignedInteger('category_id');
             $table->unsignedInteger('product_id');
             $table->timestamps();
-
-            $table->unique(['category_id', 'product_id']);
+            $table->unique(['category_id', 'product_id', 'company_id']);
+            $table->integer('company_id')->nullable();
         });
     }
 

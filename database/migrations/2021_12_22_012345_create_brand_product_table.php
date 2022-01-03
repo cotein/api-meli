@@ -17,6 +17,8 @@ class CreateBrandProductTable extends Migration
             $table->id();
             $table->unsignedInteger('brand_id');
             $table->unsignedInteger('product_id');
+            $table->integer('company_id')->nullable();
+            $table->unique(['brand_id', 'product_id', 'company_id']);
             $table->timestamps();
         });
     }

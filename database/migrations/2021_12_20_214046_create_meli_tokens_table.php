@@ -15,7 +15,6 @@ class CreateMeliTokensTable extends Migration
     {
         Schema::create('meli_tokens', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('company_id')->nullable();
             $table->integer('meli_user_id')->nullable();
             $table->integer('user_id')->nullable();
             $table->string('token_type')->nullable()->default('bearer');
@@ -24,6 +23,7 @@ class CreateMeliTokensTable extends Migration
             $table->string('meli_token_expiration_time')->nullable();
             $table->string('meli_email')->nullable();
             $table->boolean('active')->nullable()->default(false);
+            $table->integer('company_id')->nullable();
         });
     }
 
