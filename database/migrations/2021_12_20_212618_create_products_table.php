@@ -50,6 +50,7 @@ class CreateProductsTable extends Migration
             $table->integer('stock')->unsigned()->nullable()->default(0);
             $table->integer('critical_stock')->unsigned()->nullable()->default(10);
             $table->integer('company_id')->nullable();
+            $table->double('bulto', 8, 2)->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
